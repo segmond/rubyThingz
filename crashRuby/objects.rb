@@ -12,3 +12,4 @@ puts a1.empty?
 r1 = Range.new 1,6
 puts r1.class
 puts r1.include? 4
+puts r1
