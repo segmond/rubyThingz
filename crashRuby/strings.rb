@@ -22,10 +22,13 @@ puts "foobar\n\n".chomp
 print "Are you sure you want to continue? (Yes/No) "
 response = gets
 
-if (response.downcase == "yes")
+if (response.downcase.chomp == "yes")
     puts "we continue"
 else
     puts "adios"
 end
 
 puts response.inspect
+
+puts "There are %d oranges in the basket." % 12
+puts "%s, There are %d oranges and %d apples in the basket." % ["Sam", 12, 10]
