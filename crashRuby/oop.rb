@@ -4,6 +4,16 @@ class Being
     def initialize
         puts "Being is created"
     end
+
+private
+    def think
+        "think"
+    end
+
+protected
+    def breath
+        "breath"
+    end
 end
 
 # all data members are private in Ruby
@@ -27,6 +37,24 @@ class Person < Being
     def is_alive
         @@ALIVE
     end
+
+    def doit
+        puts think       # in most OOP, this will not be posible
+        puts self.breath
+        puts self.dance
+        "doing it"
+    end
+
+protected
+    def dance
+        puts sing
+        "dancing"
+    end
+
+private
+    def sing
+        "singing"
+    end
 end
 
 def foo
@@ -42,3 +70,4 @@ puts p2.get_name +  "'s favorite color is "+  p2.get_favorite_color
 
 puts p2.send :foo
 puts p2.is_alive
+puts p2.doit
