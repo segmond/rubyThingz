@@ -22,6 +22,7 @@ class Person < Being
     @@ALIVE = true
 
     def initialize name, favorite_color='blue'
+        super()
         @favorite_color = favorite_color
         @name = name
     end
@@ -61,7 +62,6 @@ def foo
     "sending foo to #{@name}"
 end
 
-Being.new
 p1 = Person.new "Jane"
 puts p1.get_name +  "'s favorite color is " +  p1.get_favorite_color
 
@@ -71,3 +71,5 @@ puts p2.get_name +  "'s favorite color is "+  p2.get_favorite_color
 puts p2.send :foo
 puts p2.is_alive
 puts p2.doit
+
+p Person.ancestors
