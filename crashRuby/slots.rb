@@ -7,6 +7,7 @@ class Slot
             [3, 3],
             [0, 3],
             [3, 3],
+            [3, 3],
             [0, 3]]
     end
 
@@ -40,11 +41,12 @@ class Slot
                 else
                     return
                 end
-                    previous_pos = pos
+                previous_pos = pos
             else
                 if previous_pos != pos then
                     puts "none consecutive slot"
-                    return
+                    puts "#{previous_pos} #{pos}"
+                    #return
                 end
                 pos += 1
             end
@@ -55,5 +57,6 @@ end
 s = Slot.new
 s.print_slots
 
-puts s.reserve 0, 2
+puts s.reserve 0, 6
+
 s.print_slots
